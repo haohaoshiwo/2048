@@ -137,7 +137,7 @@ hr {
   100% {
     opacity: 1; } }
 .game-container {
-  margin-top: 40px;
+  margin-top: 20px;
   position: relative;
   padding: 15px;
   cursor: default;
@@ -514,7 +514,8 @@ hr {
 .game-intro {
   float: left;
   line-height: 42px;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  font-size: 16px; }
 
 .restart-button {
   display: inline-block;
@@ -525,12 +526,14 @@ hr {
   color: #f9f6f2;
   height: 40px;
   line-height: 42px;
-  display: block;
-  text-align: center;
-  float: right; }
+  transition: background 0.2s ease; }
+
+.restart-button:hover {
+  background: #9f8b77; }
 
 .game-explanation {
-  margin-top: 50px; }
+  margin-top: 20px;
+  font-size: 16px; }
 
 @media screen and (max-width: 520px) {
   html, body {
@@ -562,17 +565,19 @@ hr {
     width: 55%;
     display: block;
     box-sizing: border-box;
-    line-height: 1.65; }
+    line-height: 1.65;
+    font-size: 14px; }
 
   .restart-button {
     width: 42%;
     padding: 0;
     display: block;
     box-sizing: border-box;
-    margin-top: 2px; }
+    margin-top: 2px;
+    font-size: 14px; }
 
   .game-container {
-    margin-top: 17px;
+    margin-top: 10px;
     position: relative;
     padding: 10px;
     cursor: default;
@@ -607,14 +612,13 @@ hr {
       -moz-animation-fill-mode: both;
       animation-fill-mode: both; }
       .game-container .game-message p {
-        font-size: 60px;
-        font-weight: bold;
-        height: 60px;
-        line-height: 60px;
-        margin-top: 222px; }
+        font-size: 30px !important;
+        height: 30px !important;
+        line-height: 30px !important;
+        margin-top: 90px !important; }
       .game-container .game-message .lower {
         display: block;
-        margin-top: 59px; }
+        margin-top: 30px !important; }
       .game-container .game-message a {
         display: inline-block;
         background: #8f7a66;
@@ -757,3 +761,13 @@ hr {
     margin-top: 90px !important; }
   .game-message .lower {
     margin-top: 30px !important; } }
+
+@media screen and (max-width: 320px) {
+  .container {
+    padding: 0 5px; }
+
+  .game-container {
+    margin-top: 5px; }
+
+  .game-explanation {
+    margin-top: 10px; } }
