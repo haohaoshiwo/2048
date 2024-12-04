@@ -28,22 +28,6 @@ body {
   padding: 5px 10px;
 }
 
-.submenu-content {
-  display: none;
-  position: absolute;
-  left: 100%;
-  top: 0;
-  background-color: #bbada0;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  border-radius: 3px;
-}
-
-.dropdown-content .nav-item:hover .submenu-content {
-  display: block;
-}
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -55,15 +39,6 @@ body {
   top: 100%;
   left: 0;
   margin-top: 0;
-}
-
-.dropdown-content .nav-item {
-  position: relative;
-  padding: 8px 12px;
-  color: #f9f6f2;
-  text-decoration: none;
-  display: block;
-  white-space: nowrap;
 }
 
 .nav-item::after {
