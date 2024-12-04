@@ -1,5 +1,7 @@
+/* 隐藏所有数字 */
 .tile .tile-inner {
   background-color: transparent !important;
+  color: transparent !important;
 }
 
 .tile.tile-2 .tile-inner {
