@@ -515,7 +515,8 @@ hr {
   float: left;
   line-height: 42px;
   margin-bottom: 0;
-  font-size: 16px; }
+  font-size: 16px;
+  max-width: 60%; }
 
 .restart-button {
   display: inline-block;
@@ -526,6 +527,7 @@ hr {
   color: #f9f6f2;
   height: 40px;
   line-height: 42px;
+  float: right;
   transition: background 0.2s ease; }
 
 .restart-button:hover {
@@ -566,7 +568,8 @@ hr {
     display: block;
     box-sizing: border-box;
     line-height: 1.65;
-    font-size: 14px; }
+    font-size: 14px;
+    max-width: 55%; }
 
   .restart-button {
     width: 42%;
@@ -574,7 +577,9 @@ hr {
     display: block;
     box-sizing: border-box;
     margin-top: 2px;
-    font-size: 14px; }
+    font-size: 14px;
+    float: right;
+    text-align: center; }
 
   .game-container {
     margin-top: 10px;
