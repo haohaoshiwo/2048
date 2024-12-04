@@ -19,7 +19,8 @@ h1.title {
   font-weight: bold;
   margin: 0;
   display: block;
-  float: left; }
+  float: left;
+  line-height: 55px; }
 
 @-webkit-keyframes move-up {
   0% {
@@ -60,7 +61,6 @@ h1.title {
   font-weight: bold;
   border-radius: 3px;
   color: white;
-  margin-top: 8px;
   text-align: center; }
   .score-container:after, .best-container:after {
     position: absolute;
@@ -542,7 +542,7 @@ hr {
 
   h1.title {
     font-size: 27px;
-    margin-top: 15px; }
+    line-height: 40px; }
 
   .container {
     width: 280px;
@@ -551,7 +551,9 @@ hr {
   .score-container, .best-container {
     margin-top: 0;
     padding: 15px 10px;
-    min-width: 40px; }
+    min-width: 40px;
+    height: 20px;
+    line-height: 40px; }
 
   .heading {
     margin-bottom: 10px; }
