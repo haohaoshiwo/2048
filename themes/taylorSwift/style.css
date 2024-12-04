@@ -4,12 +4,12 @@
 }
 
 .tile.tile-2 .tile-inner {
-  background: url('images/2-taylorswift.png') no-repeat center center;
+  background: url('../taylorSwift/images/2-taylorswift.png') no-repeat center center;
   background-size: 80%;
 }
 
 .tile.tile-4 .tile-inner {
-  background: url('images/4-taylorswift.png') no-repeat center center;
+  background: url('../taylorSwift/images/4-taylorswift.png') no-repeat center center;
   background-size: 80%;
 }
 
