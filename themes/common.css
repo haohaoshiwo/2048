@@ -1,0 +1,148 @@
+/* 基础布局调整 */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* 导航栏样式 */
+.nav-container {
+  background-color: #bbada0;
+  padding: 5px 0;
+  margin-bottom: 15px;
+}
+
+.nav-menu {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav-item {
+  position: relative;
+  color: #f9f6f2;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #bbada0;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 3px;
+  margin-top: 5px;
+}
+
+.nav-item:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: #f9f6f2;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #8f7a66;
+}
+
+/* 容器布局调整 */
+.container {
+  margin-top: 10px;
+  padding: 0 15px;
+  max-width: 600px;
+}
+
+.heading {
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 36px;
+  margin: 0;
+  display: block;
+  float: left;
+}
+
+.scores-container {
+  float: right;
+  margin-top: 0;
+}
+
+.above-game {
+  margin-bottom: 10px;
+}
+
+.game-intro {
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+.game-explanation {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 520px) {
+  .container {
+    padding: 0 10px;
+    margin-top: 5px;
+  }
+
+  .title {
+    font-size: 24px;
+    padding-top: 5px;
+  }
+
+  .scores-container {
+    margin-top: 0;
+  }
+
+  .score-container, .best-container {
+    padding: 10px 15px;
+    min-width: 40px;
+  }
+
+  .heading {
+    margin-bottom: 5px;
+  }
+
+  .game-intro {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .game-explanation {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+
+  .grid-container {
+    margin-top: 5px;
+  }
+}
+
+/* 小屏幕设备优化 */
+@media screen and (max-width: 320px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .container {
+    padding: 0 5px;
+  }
+
+  .score-container, .best-container {
+    padding: 8px 12px;
+    min-width: 30px;
+    font-size: 14px;
+  }
+} 
