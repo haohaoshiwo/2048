@@ -1,10 +1,14 @@
+.tile .tile-inner {
+  background-color: transparent !important;
+}
+
 .tile.tile-2 .tile-inner {
-  background: url('../images/zodiac/2-mouse.png') no-repeat center center;
+  background: url('./images/zodiac/2-mouse.png') no-repeat center center;
   background-size: 80%;
 }
 
 .tile.tile-4 .tile-inner {
-  background: url('../images/zodiac/4-ox.png') no-repeat center center;
+  background: url('./images/zodiac/4-ox.png') no-repeat center center;
   background-size: 80%;
 }
 
