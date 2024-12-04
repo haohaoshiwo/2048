@@ -78,7 +78,7 @@ body {
   margin-bottom: 10px;
 }
 
-.title {
+h1.title {
   font-size: 28px;
   margin: 0;
   display: block;
@@ -111,7 +111,7 @@ body {
     margin-top: 5px;
   }
 
-  .title {
+  h1.title {
     font-size: 20px;
     padding-top: 5px;
   }
@@ -146,7 +146,7 @@ body {
 
 /* 小屏幕设备优化 */
 @media screen and (max-width: 320px) {
-  .title {
+  h1.title {
     font-size: 18px;
   }
 
