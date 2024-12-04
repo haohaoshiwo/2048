@@ -1,0 +1,64 @@
+.tile.tile-2 .tile-inner {
+  background: url('../images/zodiac/mouse.png') no-repeat center center;
+  background-size: 80%;
+}
+
+.tile.tile-4 .tile-inner {
+  background: url('../images/zodiac/ox.png') no-repeat center center;
+  background-size: contain;
+}
+
+.tile.tile-8 .tile-inner {
+  background: url('../images/zodiac/tiger.png') no-repeat center center;
+  background-size: contain;
+}
+
+.tile.tile-16 .tile-inner {
+  background: url('../images/zodiac/rabbit.png') no-repeat center center;
+  background-size: contain;
+}
+
+.tile.tile-32 .tile-inner {
+  background: url('../images/zodiac/dragon.png') no-repeat center center;
+  background-size: contain;
+}
+
+.tile.tile-64 .tile-inner {
+  background: url('../images/zodiac/snake.png') no-repeat center center;
+  background-size: contain;
+}
+
+.tile.tile-128 .tile-inner {
+  background: url('../images/zodiac/horse.png') no-repeat center center;
+  background-size: contain;
+}
+
+.tile.tile-256 .tile-inner {
+  background: url('../images/zodiac/goat.png') no-repeat center center;
+  background-size: contain;
+}
+
+.tile.tile-512 .tile-inner {
+  background: url('../images/zodiac/monkey.png') no-repeat center center;
+  background-size: contain;
+}
+
+.tile.tile-1024 .tile-inner {
+  background: url('../images/zodiac/rooster.png') no-repeat center center;
+  background-size: contain;
+}
+
+.tile.tile-2048 .tile-inner {
+  background: url('../images/zodiac/dog.png') no-repeat center center;
+  background-size: contain;
+}
+
+.tile.tile-super .tile-inner {
+  background: url('../images/zodiac/pig.png') no-repeat center center;
+  background-size: contain;
+}
+
+/* 隐藏数字 */
+.tile-inner {
+  color: transparent;
+} 

@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>2048 游戏系列</title>
+  <title>2048 - 十二生肖版</title>
   
-  <!-- 添加导航栏样式 -->
+  <!-- 导航栏样式 -->
   <style>
     .nav-container {
       background-color: #bbada0;
@@ -54,32 +54,22 @@
     }
   </style>
 
-  <!-- 原有的样式表引用保持不变 -->
-  <link href="style/main.css" rel="stylesheet" type="text/css">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
-  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
-  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x920.png"  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
+  <link href="../style/main.css" rel="stylesheet" type="text/css">
+  <link href="zodiac/style.css" rel="stylesheet" type="text/css">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 <body>
-  <!-- 添加导航栏 -->
   <div class="nav-container">
     <div class="nav-menu">
       <div class="nav-item">
-        <a href="index.html" style="color: #f9f6f2; text-decoration: none;">首页</a>
+        <a href="../index.html" style="color: #f9f6f2; text-decoration: none;">首页</a>
       </div>
       <div class="nav-item">
         主题
         <div class="dropdown-content">
-          <a href="themes/zodiac.html">十二生肖</a>
-          <a href="themes/stars.html">明星</a>
-          <a href="themes/anime.html">动漫</a>
+          <a href="zodiac.html">十二生肖</a>
+          <a href="stars.html">明星</a>
+          <a href="anime.html">动漫</a>
         </div>
       </div>
     </div>
@@ -87,7 +77,7 @@
 
   <div class="container">
     <div class="heading">
-      <h1 class="title">2048</h1>
+      <h1 class="title">2048 - 十二生肖版</h1>
       <div class="scores-container">
         <div class="score-container">0</div>
         <div class="best-container">0</div>
@@ -95,16 +85,17 @@
     </div>
 
     <div class="above-game">
-      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
-      <a class="restart-button">New Game</a>
+      <p class="game-intro">合并相同的生肖，获得<strong>龙</strong>!</p>
+      <a class="restart-button">新游戏</a>
     </div>
 
     <div class="game-container">
+      <!-- 游戏容器内容与原版相同 -->
       <div class="game-message">
         <p></p>
         <div class="lower">
-	        <a class="keep-playing-button">Keep going</a>
-          <a class="retry-button">Try again</a>
+          <a class="keep-playing-button">继续游戏</a>
+          <a class="retry-button">重新开始</a>
         </div>
       </div>
 
@@ -136,26 +127,23 @@
       </div>
 
       <div class="tile-container">
-
       </div>
     </div>
 
     <p class="game-explanation">
-      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+      <strong class="important">玩法说明：</strong> 使用 <strong>方向键</strong> 移动方块，相同的生肖相遇时会 <strong>合并成为下一个生肖！</strong>
     </p>
-    <hr>
-   
   </div>
 
-  <script src="js/bind_polyfill.js"></script>
-  <script src="js/classlist_polyfill.js"></script>
-  <script src="js/animframe_polyfill.js"></script>
-  <script src="js/keyboard_input_manager.js"></script>
-  <script src="js/html_actuator.js"></script>
-  <script src="js/grid.js"></script>
-  <script src="js/tile.js"></script>
-  <script src="js/local_storage_manager.js"></script>
-  <script src="js/game_manager.js"></script>
-  <script src="js/application.js"></script>
+  <script src="../js/bind_polyfill.js"></script>
+  <script src="../js/classlist_polyfill.js"></script>
+  <script src="../js/animframe_polyfill.js"></script>
+  <script src="../js/keyboard_input_manager.js"></script>
+  <script src="../js/html_actuator.js"></script>
+  <script src="../js/grid.js"></script>
+  <script src="../js/tile.js"></script>
+  <script src="../js/local_storage_manager.js"></script>
+  <script src="../js/game_manager.js"></script>
+  <script src="../js/application.js"></script>
 </body>
 </html>
