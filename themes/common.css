@@ -190,4 +190,51 @@ h1.title {
 
 .nav-item:hover {
   opacity: 0.9;
+}
+
+/* SEO内容样式 */
+.game-description {
+  margin-top: 30px;
+  color: #776e65;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.game-description h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #776e65;
+}
+
+.game-description h3 {
+  font-size: 20px;
+  margin: 20px 0 10px;
+  color: #776e65;
+}
+
+.game-description p {
+  margin-bottom: 15px;
+}
+
+.game-description ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.game-description li {
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 520px) {
+  .game-description {
+    font-size: 14px;
+  }
+  
+  .game-description h2 {
+    font-size: 20px;
+  }
+  
+  .game-description h3 {
+    font-size: 18px;
+  }
 } 
