@@ -159,4 +159,22 @@ h1.title {
     min-width: 30px;
     font-size: 14px;
   }
+}
+
+.theme-intro {
+  font-size: 14px;
+  color: #776e65;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.theme-intro a {
+  color: #776e65;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.theme-intro a:hover {
+  color: #8f7a66;
 } 
