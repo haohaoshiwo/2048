@@ -14,51 +14,51 @@
 }
 
 .tile.tile-8 .tile-inner {
-  background: url('images/8-taylorswift.png') no-repeat center center;
+  background: url('../taylorSwift/images/8-taylorswift.png') no-repeat center center;
   background-size: 80%;
 }
 
 .tile.tile-16 .tile-inner {
-  background: url('images/16-taylorswift.png') no-repeat center center;
+  background: url('../taylorSwift/images/16-taylorswift.png') no-repeat center center;
   background-size: 80%;
 }
 
 .tile.tile-32 .tile-inner {
-  background: url('images/32-taylorswift.png') no-repeat center center;
+  background: url('../taylorSwift/images/32-taylorswift.png') no-repeat center center;
   background-size: 80%;
 }
 
 .tile.tile-64 .tile-inner {
-  background: url('images/64-taylorswift.png') no-repeat center center;
+  background: url('../taylorSwift/images/64-taylorswift.png') no-repeat center center;
   background-size: 80%;
 }
 
 .tile.tile-128 .tile-inner {
-  background: url('images/128-taylorswift.png') no-repeat center center;
+  background: url('../taylorSwift/images/128-taylorswift.png') no-repeat center center;
   background-size: 80%;
 }
 
 .tile.tile-256 .tile-inner {
-  background: url('images/256-taylorswift.png') no-repeat center center;
+  background: url('../taylorSwift/images/256-taylorswift.png') no-repeat center center;
   background-size: 80%;
 }
 
 .tile.tile-512 .tile-inner {
-  background: url('images/512-taylorswift.png') no-repeat center center;
+  background: url('../taylorSwift/images/512-taylorswift.png') no-repeat center center;
   background-size: 80%;
 }
 
 .tile.tile-1024 .tile-inner {
-  background: url('images/1024-taylorswift.png') no-repeat center center;
+  background: url('../taylorSwift/images/1024-taylorswift.png') no-repeat center center;
   background-size: 80%;
 }
 
 .tile.tile-2048 .tile-inner {
-  background: url('images/2048-taylorswift.png') no-repeat center center;
+  background: url('../taylorSwift/images/2048-taylorswift.png') no-repeat center center;
   background-size: 80%;
 }
 
 .tile.tile-super .tile-inner {
-  background: url('images/4096-taylorswift.png') no-repeat center center;
+  background: url('../taylorSwift/images/4096-taylorswift.png') no-repeat center center;
   background-size: 80%;
 } 

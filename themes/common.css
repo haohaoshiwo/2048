@@ -177,4 +177,13 @@ h1.title {
 
 .theme-intro a:hover {
   color: #8f7a66;
+}
+
+.restart-button:hover {
+  background-color: #9f8b77;
+  transition: background-color 0.2s ease;
+}
+
+.nav-item:hover {
+  opacity: 0.9;
 } 
