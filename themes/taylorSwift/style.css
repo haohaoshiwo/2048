@@ -1,64 +1,64 @@
+.tile .tile-inner {
+  background-color: transparent !important;
+  color: transparent !important;
+}
+
 .tile.tile-2 .tile-inner {
-  background: url('../images/stars/star1.png') no-repeat center center;
-  background-size: contain;
+  background: url('./images/2-debut.png') no-repeat center center;
+  background-size: 80%;
 }
 
 .tile.tile-4 .tile-inner {
-  background: url('../images/stars/star2.png') no-repeat center center;
-  background-size: contain;
+  background: url('./images/4-fearless.png') no-repeat center center;
+  background-size: 80%;
 }
 
 .tile.tile-8 .tile-inner {
-  background: url('../images/stars/star3.png') no-repeat center center;
-  background-size: contain;
+  background: url('./images/8-red.png') no-repeat center center;
+  background-size: 80%;
 }
 
 .tile.tile-16 .tile-inner {
-  background: url('../images/stars/star4.png') no-repeat center center;
-  background-size: contain;
+  background: url('./images/16-1989.png') no-repeat center center;
+  background-size: 80%;
 }
 
 .tile.tile-32 .tile-inner {
-  background: url('../images/stars/star5.png') no-repeat center center;
-  background-size: contain;
+  background: url('./images/32-reputation.png') no-repeat center center;
+  background-size: 80%;
 }
 
 .tile.tile-64 .tile-inner {
-  background: url('../images/stars/star6.png') no-repeat center center;
-  background-size: contain;
+  background: url('./images/64-lover.png') no-repeat center center;
+  background-size: 80%;
 }
 
 .tile.tile-128 .tile-inner {
-  background: url('../images/stars/star7.png') no-repeat center center;
-  background-size: contain;
+  background: url('./images/128-folklore.png') no-repeat center center;
+  background-size: 80%;
 }
 
 .tile.tile-256 .tile-inner {
-  background: url('../images/stars/star8.png') no-repeat center center;
-  background-size: contain;
+  background: url('./images/256-evermore.png') no-repeat center center;
+  background-size: 80%;
 }
 
 .tile.tile-512 .tile-inner {
-  background: url('../images/stars/star9.png') no-repeat center center;
-  background-size: contain;
+  background: url('./images/512-midnights.png') no-repeat center center;
+  background-size: 80%;
 }
 
 .tile.tile-1024 .tile-inner {
-  background: url('../images/stars/star10.png') no-repeat center center;
-  background-size: contain;
+  background: url('./images/1024-speak.png') no-repeat center center;
+  background-size: 80%;
 }
 
 .tile.tile-2048 .tile-inner {
-  background: url('../images/stars/star11.png') no-repeat center center;
-  background-size: contain;
+  background: url('./images/2048-eras.png') no-repeat center center;
+  background-size: 80%;
 }
 
 .tile.tile-super .tile-inner {
-  background: url('../images/stars/star12.png') no-repeat center center;
-  background-size: contain;
-}
-
-/* 隐藏数字 */
-.tile-inner {
-  color: transparent;
+  background: url('./images/4096-super.png') no-repeat center center;
+  background-size: 80%;
 } 
