@@ -3,58 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>2048 游戏系列</title>
-  
-  <!-- 添加导航栏样式 -->
-  <style>
-    .nav-container {
-      background-color: #bbada0;
-      padding: 10px 0;
-      margin-bottom: 20px;
-    }
-    
-    .nav-menu {
-      max-width: 500px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-    
-    .nav-item {
-      position: relative;
-      color: #f9f6f2;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 18px;
-    }
-    
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #bbada0;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-      border-radius: 3px;
-    }
-    
-    .nav-item:hover .dropdown-content {
-      display: block;
-    }
-    
-    .dropdown-content a {
-      color: #f9f6f2;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-    
-    .dropdown-content a:hover {
-      background-color: #8f7a66;
-    }
-  </style>
-
-  <!-- 原有的样式表引用保持不变 -->
+  <link href="themes/common.css" rel="stylesheet" type="text/css">
   <link href="style/main.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
@@ -68,11 +17,10 @@
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 <body>
-  <!-- 添加导航栏 -->
   <div class="nav-container">
     <div class="nav-menu">
       <div class="nav-item">
-        <a href="index.html" style="color: #f9f6f2; text-decoration: none;">首页</a>
+        <a href="index.html" style="color: #f9f6f2; text-decoration: none; display: block;">首页</a>
       </div>
       <div class="nav-item">
         主题
