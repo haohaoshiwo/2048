@@ -9,6 +9,8 @@ body {
   background-color: #bbada0;
   padding: 5px 0;
   margin-bottom: 15px;
+  position: relative;
+  z-index: 90;
 }
 
 .nav-menu {
@@ -34,7 +36,7 @@ body {
   background-color: #bbada0;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 100;
   border-radius: 3px;
   top: 100%;
   left: 0;
@@ -88,6 +90,8 @@ h1.title {
 .scores-container {
   float: right;
   margin-top: 0;
+  z-index: 1;
+  position: relative;
 }
 
 .above-game {
