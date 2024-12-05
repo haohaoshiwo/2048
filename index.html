@@ -63,9 +63,6 @@
           <a href="#" class="twitter-share" onclick="shareOnTwitter()">
             <i class="fab fa-twitter"></i> Share on Twitter
           </a>
-          <a href="#" class="youtube-share" onclick="shareOnYouTube()">
-            <i class="fab fa-youtube"></i> Share on YouTube
-          </a>
           <a href="#" class="xiaohongshu-share" onclick="shareOnXiaohongshu()">
             <i class="fas fa-heart"></i> Share on 小红书
           </a>
@@ -147,14 +144,8 @@
       window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
     }
 
-    function shareOnYouTube() {
-      // YouTube分享可以链接到一个介绍视频
-      const videoId = "YOUR_VIDEO_ID";
-      window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
-    }
-
     function shareOnXiaohongshu() {
-      // 小红书目前没有直接的分享API，可以跳转到小红书的相关页面或者复制链接
+      // 小红书分享
       const text = "I just played 2048 Game! Check it out: " + window.location.href;
       navigator.clipboard.writeText(text).then(() => {
         alert("Link copied! You can now paste it on Xiaohongshu.");

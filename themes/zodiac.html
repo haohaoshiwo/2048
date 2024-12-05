@@ -51,9 +51,6 @@
           <a href="#" class="twitter-share" onclick="shareOnTwitter()">
             <i class="fab fa-twitter"></i> Share on Twitter
           </a>
-          <a href="#" class="youtube-share" onclick="shareOnYouTube()">
-            <i class="fab fa-youtube"></i> Share on YouTube
-          </a>
           <a href="#" class="xiaohongshu-share" onclick="shareOnXiaohongshu()">
             <i class="fas fa-heart"></i> Share on 小红书
           </a>
@@ -136,12 +133,6 @@
       const text = "I just played Chinese Zodiac 2048! Match the zodiac animals!";
       const url = window.location.href;
       window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
-    }
- 
-    function shareOnYouTube() {
-      // YouTube分享可以链接到一个介绍视频
-      const videoId = "YOUR_VIDEO_ID";
-      window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
     }
  
     function shareOnXiaohongshu() {
