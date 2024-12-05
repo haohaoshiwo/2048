@@ -12,6 +12,7 @@
   <link rel="icon" type="image/x-icon" href="../favicon-16x16.ico">
   <link rel="shortcut icon" type="image/x-icon" href="../favicon-16x16.ico">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
   <div class="nav-container">
@@ -46,6 +47,17 @@
     <div class="game-container">
       <div class="game-message">
         <p></p>
+        <div class="social-sharing">
+          <a href="#" class="twitter-share" onclick="shareOnTwitter()">
+            <i class="fab fa-twitter"></i> Share on Twitter
+          </a>
+          <a href="#" class="youtube-share" onclick="shareOnYouTube()">
+            <i class="fab fa-youtube"></i> Share on YouTube
+          </a>
+          <a href="#" class="xiaohongshu-share" onclick="shareOnXiaohongshu()">
+            <i class="fas fa-heart"></i> Share on 小红书
+          </a>
+        </div>
         <div class="lower">
           <a class="keep-playing-button">Keep going</a>
           <a class="retry-button">Try again</a>
@@ -119,6 +131,27 @@
   <script src="../js/local_storage_manager.js"></script>
   <script src="../js/game_manager.js"></script>
   <script src="../js/application.js"></script>
+  <script>
+    function shareOnTwitter() {
+      const text = "I just played Chinese Zodiac 2048! Match the zodiac animals!";
+      const url = window.location.href;
+      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+    }
+ 
+    function shareOnYouTube() {
+      // YouTube分享可以链接到一个介绍视频
+      const videoId = "YOUR_VIDEO_ID";
+      window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+    }
+ 
+    function shareOnXiaohongshu() {
+      // 小红书分享
+      const text = "I just played Chinese Zodiac 2048! Check it out: " + window.location.href;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Link copied! You can now paste it on Xiaohongshu.");
+      });
+    }
+  </script>
   <div style="display: none;">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PC9T8W1TWM"></script>

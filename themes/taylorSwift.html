@@ -131,6 +131,27 @@
   <script src="../js/local_storage_manager.js"></script>
   <script src="../js/game_manager.js"></script>
   <script src="../js/application.js"></script>
+  <script>
+    function shareOnTwitter() {
+      const text = "I just played Taylor Swift 2048! Try to match AI-generated Taylor portraits!";
+      const url = window.location.href;
+      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+    }
+
+    function shareOnYouTube() {
+      // YouTube分享可以链接到一个介绍视频
+      const videoId = "YOUR_VIDEO_ID";
+      window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+    }
+
+    function shareOnXiaohongshu() {
+      // 小红书分享
+      const text = "I just played Taylor Swift 2048! Check it out: " + window.location.href;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Link copied! You can now paste it on Xiaohongshu.");
+      });
+    }
+  </script>
   <div style="display: none;">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PC9T8W1TWM"></script>
