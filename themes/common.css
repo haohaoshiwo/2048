@@ -19,6 +19,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 15px;
+  position: relative;
 }
 
 .nav-item {
@@ -298,4 +299,22 @@ h1.title {
   .social-sharing a {
     padding: 6px 12px;
     font-size: 12px;
-} 
+}
+
+.site-title {
+  position: absolute;
+  left: 15px;
+  color: #f9f6f2;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 32px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 520px) {
+  .site-title {
+    font-size: 18px;
+    left: 10px;
+  }
+}
+  
