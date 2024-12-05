@@ -95,7 +95,7 @@ h1.title {
 }
 
 .above-game {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .game-intro {
@@ -168,7 +168,7 @@ h1.title {
 .theme-intro {
   font-size: 14px;
   color: #776e65;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   text-align: left;
 }
 
@@ -237,4 +237,54 @@ h1.title {
   .game-description h3 {
     font-size: 18px;
   }
+}
+
+/* 社交分享按钮样式 */
+.social-sharing {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.social-sharing a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: opacity 0.2s;
+}
+
+.social-sharing a:hover {
+  opacity: 0.8;
+}
+
+.social-sharing .twitter-share {
+  background-color: #1DA1F2;
+}
+
+.social-sharing .youtube-share {
+  background-color: #FF0000;
+}
+
+.social-sharing .xiaohongshu-share {
+  background-color: #FE2C55;
+}
+
+.social-sharing i {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 520px) {
+  .social-sharing {
+    margin: 15px 0;
+  }
+  
+  .social-sharing a {
+    padding: 6px 12px;
+    font-size: 12px;
 } 
