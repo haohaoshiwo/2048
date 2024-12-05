@@ -95,7 +95,7 @@ h1.title {
 }
 
 .above-game {
-  margin-bottom: 5px;
+  margin-bottom: 1px;
 }
 
 .game-intro {
@@ -168,7 +168,7 @@ h1.title {
 .theme-intro {
   font-size: 14px;
   color: #776e65;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
   text-align: left;
 }
 
