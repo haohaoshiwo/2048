@@ -67,7 +67,8 @@
   border-radius: 4px;
 }
 
-.nav-item a {
+.nav-item a,
+.nav-item span {
   color: #f9f6f2;
   text-decoration: none;
   display: block;
@@ -111,6 +112,11 @@
   cursor: pointer;
   white-space: nowrap;
   padding: 10px;
+}
+
+.language-selector span {
+  color: #f9f6f2;
+  display: block;
 }
 
 .language-selector:hover {
