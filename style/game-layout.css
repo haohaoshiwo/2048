@@ -1,0 +1,25 @@
+/* Game Intro and Above Game Styles */
+.game-intro {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.above-game {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.above-game .game-intro {
+  margin: 0;
+  text-align: left;
+  flex: 1;
+  padding-right: 20px;
+}
+
+.above-game .restart-button {
+  white-space: nowrap;
+} 
