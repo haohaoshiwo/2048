@@ -150,7 +150,9 @@
     }
 
     function shareOnXiaohongshu() {
-      const text = "Welcome to 2048 Game Series! Try our themed versions: " + window.location.href;
+      const score = document.querySelector('.score-container').textContent;
+      const best = document.querySelector('.best-container').textContent;
+      const text = `I scored ${score} points in 2048! My best score is ${best}. Come and challenge me! ${window.location.href}`;
       navigator.clipboard.writeText(text).then(() => {
         alert("Share on Little Red Book");
       });

@@ -184,7 +184,9 @@
     }
 
     function shareOnXiaohongshu() {
-      const text = "Taylor Swift 2048 - A special edition celebrating Taylor Swift through AI-generated artistic portraits. " + window.location.href;
+      const score = document.querySelector('.score-container').textContent;
+      const best = document.querySelector('.best-container').textContent;
+      const text = `I scored ${score} points in Taylor Swift 2048! My best score is ${best}. Come and challenge me! ${window.location.href}`;
       navigator.clipboard.writeText(text).then(() => {
         alert("Share on Little Red Book");
       });
