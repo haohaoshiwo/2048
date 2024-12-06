@@ -71,15 +71,36 @@ body {
 }
 
 .game-intro {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 40px;
 }
 
+.game-intro p {
+  margin: 0;
+}
+
 .above-game {
-  text-align: center;
-  margin-bottom: 40px;
-  position: relative;
-  z-index: 10;
+  margin: 0;
+}
+
+.restart-button {
+  display: inline-block;
+  background: #8f7a66;
+  border-radius: 3px;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #f9f6f2;
+  height: 40px;
+  line-height: 42px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.restart-button:hover {
+  background: #776e65;
 }
 
 .game-container {
