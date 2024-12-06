@@ -6,7 +6,7 @@
 
 .above-game {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -21,6 +21,13 @@
   min-width: 0;
 }
 
+.above-game .button-container {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  min-width: 120px;
+}
+
 .restart-button {
   display: inline-block;
   background: #8f7a66;
@@ -31,7 +38,6 @@
   height: 40px;
   line-height: 42px;
   cursor: pointer;
-  flex-shrink: 0;
 }
 
 .restart-button:hover {
