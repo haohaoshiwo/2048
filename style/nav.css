@@ -75,34 +75,38 @@
 
 /* 下拉菜单 */
 .dropdown-content {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
-  top: 100%;
+  top: calc(100% + 5px);
   background-color: #776e65;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1000;
   border-radius: 4px;
-  margin-top: 5px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+  padding: 5px 0;
 }
 
 .nav-item:hover .dropdown-content,
 .language-selector:hover .dropdown-content {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .dropdown-content a {
   color: #f9f6f2 !important;
-  padding: 12px 16px;
+  padding: 12px 20px;
   text-decoration: none;
   display: block;
   white-space: nowrap;
+  transition: background-color 0.2s ease;
 }
 
 .dropdown-content a:hover {
   background-color: #8f7a66;
-  border-radius: 4px;
 }
 
 /* 语言选择器 */
@@ -110,7 +114,7 @@
   position: relative;
   cursor: pointer;
   white-space: nowrap;
-  padding: 10px;
+  padding: 10px 15px;
 }
 
 .language-selector span {
@@ -124,9 +128,9 @@
 }
 
 .language-selector .dropdown-content {
-  right: 0;
-  left: auto;
-  top: 100%;
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* 响应式设计 */
@@ -165,17 +169,13 @@
   }
 
   .language-selector {
-    width: 100%;
+    width: auto;
     text-align: center;
     margin-top: 10px;
   }
 
   .dropdown-content {
     position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    min-width: 140px;
+    width: 160px;
   }
 } 
