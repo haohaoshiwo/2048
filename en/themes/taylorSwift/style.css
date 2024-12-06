@@ -1,66 +1,107 @@
 .tile .tile-inner {
   background-color: transparent !important;
   color: transparent !important;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .tile.tile-2 .tile-inner {
   background: url('images/2-taylorswift.png') no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
   background-size: contain;
+  will-change: transform;
 }
 
 .tile.tile-4 .tile-inner {
   background: url('images/4-taylorswift.png') no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
   background-size: contain;
+  will-change: transform;
 }
 
 .tile.tile-8 .tile-inner {
   background: url('images/8-taylorswift.png') no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
   background-size: contain;
+  will-change: transform;
 }
 
 .tile.tile-16 .tile-inner {
   background: url('images/16-taylorswift.png') no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
   background-size: contain;
+  will-change: transform;
 }
 
 .tile.tile-32 .tile-inner {
   background: url('images/32-taylorswift.png') no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
   background-size: contain;
+  will-change: transform;
 }
 
 .tile.tile-64 .tile-inner {
   background: url('images/64-taylorswift.png') no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
   background-size: contain;
+  will-change: transform;
 }
 
 .tile.tile-128 .tile-inner {
   background: url('images/128-taylorswift.png') no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
   background-size: contain;
+  will-change: transform;
 }
 
 .tile.tile-256 .tile-inner {
   background: url('images/256-taylorswift.png') no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
   background-size: contain;
+  will-change: transform;
 }
 
 .tile.tile-512 .tile-inner {
   background: url('images/512-taylorswift.png') no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
   background-size: contain;
+  will-change: transform;
 }
 
 .tile.tile-1024 .tile-inner {
   background: url('images/1024-taylorswift.png') no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
   background-size: contain;
+  will-change: transform;
 }
 
 .tile.tile-2048 .tile-inner {
   background: url('images/2048-taylorswift.png') no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
   background-size: contain;
+  will-change: transform;
 }
 
 .tile.tile-super .tile-inner {
   background: url('images/4096-taylorswift.png') no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
   background-size: contain;
+  will-change: transform;
 }
 
 .features-list {
