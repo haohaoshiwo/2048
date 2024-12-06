@@ -1,109 +1,132 @@
 .tile .tile-inner {
   background-color: transparent !important;
   color: transparent !important;
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  transform: translateZ(0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .tile.tile-2 .tile-inner {
   background: url('images/2-taylorswift.png') no-repeat center center;
   -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
-  will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .tile.tile-4 .tile-inner {
   background: url('images/4-taylorswift.png') no-repeat center center;
   -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
-  will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .tile.tile-8 .tile-inner {
   background: url('images/8-taylorswift.png') no-repeat center center;
   -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
-  will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .tile.tile-16 .tile-inner {
   background: url('images/16-taylorswift.png') no-repeat center center;
   -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
-  will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .tile.tile-32 .tile-inner {
   background: url('images/32-taylorswift.png') no-repeat center center;
   -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
-  will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .tile.tile-64 .tile-inner {
   background: url('images/64-taylorswift.png') no-repeat center center;
   -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
-  will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .tile.tile-128 .tile-inner {
   background: url('images/128-taylorswift.png') no-repeat center center;
   -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
-  will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .tile.tile-256 .tile-inner {
   background: url('images/256-taylorswift.png') no-repeat center center;
   -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
-  will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .tile.tile-512 .tile-inner {
   background: url('images/512-taylorswift.png') no-repeat center center;
   -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
-  will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .tile.tile-1024 .tile-inner {
   background: url('images/1024-taylorswift.png') no-repeat center center;
   -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
-  will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .tile.tile-2048 .tile-inner {
   background: url('images/2048-taylorswift.png') no-repeat center center;
   -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
-  will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .tile.tile-super .tile-inner {
   background: url('images/4096-taylorswift.png') no-repeat center center;
   -webkit-background-size: contain;
-  -moz-background-size: contain;
   background-size: contain;
-  will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
+/* 确保游戏容器在 Safari 中正确渲染 */
+.game-container {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grid-container {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.tile-container {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* 保持其他样式不变 */
 .features-list {
     list-style: none;
     padding: 0;
@@ -115,11 +138,13 @@
     margin: 8px 0;
     background: rgba(255, 192, 203, 0.1);
     border-radius: 8px;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
 .features-list li:hover {
     background: rgba(255, 192, 203, 0.2);
+    -webkit-transform: translateX(10px);
     transform: translateX(10px);
 }
 
