@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <title>2048 Game Series | 2048 Fun Games</title>
+  <title>2048 游戏系列 | 2048 趣味游戏</title>
   <meta name="description" content="欢迎来到2048游戏系列！尝试我们的主题版本：">
-  <link href="../themes/common.css" rel="stylesheet" type="text/css">
+  <link href="../style/nav.css" rel="stylesheet" type="text/css">
   <link href="../style/main.css" rel="stylesheet" type="text/css">
+  <link href="../style/game-layout.css" rel="stylesheet" type="text/css">
   <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -19,23 +20,25 @@
 <body>
   <div class="nav-container">
     <div class="nav-menu">
-      <div class="site-title">2048+</div>
-      <div class="nav-item">
-        <a href="index.html" style="color: #f9f6f2; text-decoration: none; display: block;">首页</a>
-      </div>
-      <div class="nav-item">
-        <span>主题</span>
-        <div class="dropdown-content">
-          <a href="themes/zodiac.html">生肖版</a>
-          <a href="themes/taylorSwift.html">泰勒斯威夫特版</a>
+      <div class="nav-left">
+        <div class="site-title">2048+</div>
+        <div class="nav-item">
+          <a href="index.html">首页</a>
+        </div>
+        <div class="nav-item">
+          <span>主题</span>
+          <div class="dropdown-content">
+            <a href="themes/zodiac.html">生肖版</a>
+            <a href="themes/taylorSwift.html">霉霉版</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="language-selector nav-item">
-      <span>语言</span>
-      <div class="dropdown-content">
-        <a href="/cn/index.html">简体中文</a>
-        <a href="/en/index.html">English</a>
+      <div class="language-selector">
+        <span>语言</span>
+        <div class="dropdown-content">
+          <a href="/cn/index.html">简体中文</a>
+          <a href="/en/index.html">English</a>
+        </div>
       </div>
     </div>
   </div>
@@ -112,7 +115,7 @@
     <hr>
     <div class="game-description">
       <h2>关于2048</h2>
-      <p>2048是由Gabriele Cirulli于2014年3月创建的一款令人上瘾的益智游戏。这个游戏迅速成为全球现象，衍生出众多变体和改编版本。游戏目标简单而具有挑战性：合并相同的数字以创建数字2048的方块。</p>
+      <p>2048是由Gabriele Cirulli于2014年3月创建的一款令人上瘾的益智游戏。这个游戏迅速成��全球现象，衍生出众多变体和改编版本。游戏目标简单而具有挑战性：合并相同的数字以创建数字2048的方块。</p>
       
       <h3>游戏机制</h3>
       <p>玩家使用方向键在4x4网格上滑动数字方块。当两个相同数字的方块碰撞时，它们会合并成一个新的方块，数字为两者之和。游戏持续进行，直到你创建出2048方块（胜利）或无法继续移动（游戏结束）。</p>
