@@ -1,0 +1,130 @@
+/* 导航栏容器 */
+.nav-container {
+  background-color: #776e65;
+  padding: 10px 0;
+  margin-bottom: 40px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* 导航菜单 */
+.nav-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* 网站标题 */
+.site-title {
+  color: #f9f6f2;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 40px;
+  white-space: nowrap;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+/* 导航项 */
+.nav-item {
+  position: relative;
+  margin-right: 20px;
+  color: #f9f6f2;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+/* 下拉菜单 */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #776e65;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.nav-item:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: #f9f6f2;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: #8f7a66;
+}
+
+/* 语言选择器 */
+.language-selector {
+  margin-left: auto;
+  white-space: nowrap;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 520px) {
+  .nav-menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .site-title {
+    margin-right: 20px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .nav-item {
+    margin-right: 15px;
+    font-size: 16px;
+  }
+
+  .language-selector {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-content {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    min-width: 140px;
+  }
+} 
