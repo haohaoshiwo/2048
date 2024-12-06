@@ -12,24 +12,25 @@
   margin-bottom: 20px;
   padding: 10px 0;
   width: 100%;
+  gap: 20px;
 }
 
 .above-game .game-intro {
   margin: 0;
   text-align: left;
-  flex: 1;
-  padding-right: 20px;
-  min-width: 0;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: visible;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  min-width: 0;
 }
 
 .above-game .button-container {
   display: flex;
   justify-content: flex-end;
-  flex-shrink: 0;
-  min-width: 120px;
+  flex: 0 0 auto;
+  width: auto;
 }
 
 .restart-button {
@@ -42,6 +43,7 @@
   height: 40px;
   line-height: 42px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .restart-button:hover {
