@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>2048 Game Series | 2048 Fun Games</title>
+  <script>
+    function getPreferredLanguage() {
+      // 获取浏览器语言设置
+      const lang = navigator.language || navigator.userLanguage;
+      
+      // 支持的语言列表
+      const supportedLanguages = ['en', 'cn', 'jp', 'kr'];
+      
+      // 获取语言代码的前两个字符
+      const browserLang = lang.toLowerCase().slice(0, 2);
+      
+      // 如果是中文，返回 'cn'
+      if (browserLang === 'zh') {
+        return 'cn';
+      }
+      
+      // 如果是支持的语言，返回对应代码
+      if (supportedLanguages.includes(browserLang)) {
+        return browserLang;
+      }
+      
+      // 默认返回英文
+      return 'en';
+    }
+
+    // 执行重定向
+    const lang = getPreferredLanguage();
+    window.location.href = '/' + lang + '/index.html';
+  </script>
+</head>
+<body>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=/en/index.html">
+    If you are not redirected automatically, please <a href="/en/index.html">click here</a>.
+  </noscript>
+</body>
+</html>

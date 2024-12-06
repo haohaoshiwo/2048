@@ -1,123 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="{lang}">
 <head>
   <meta charset="utf-8">
-  <title>2048 Taylor Swift Edition | Taylor Swift 2048</title>
-  <meta name="description" content="Play the Taylor Swift Edition of 2048! Merge photos to unlock memorable moments. Use arrow keys to slide and combine tiles.">
-  <meta name="keywords" content="Taylor Swift game, 2048 game, Taylor Swift puzzle, Swiftie game">
-  <meta name="author" content="bookbyter">
-  <link href="../style/main.css" rel="stylesheet" type="text/css">
+  <title>{taylorTitle} | 2048+ Game Series</title>
+  <meta name="description" content="{taylorDescription}">
+  <meta name="keywords" content="泰勒斯威夫特版, 2048 game, {debut}, {fearless}, {speakNow}, {red}, {1989}, {reputation}, {lover}, {folklore}, {evermore}, {midnights}">
   <link href="../themes/common.css" rel="stylesheet" type="text/css">
-  <link href="./taylorSwift/style.css" rel="stylesheet" type="text/css">
+  <link href="../style/main.css" rel="stylesheet" type="text/css">
+  <link href="taylorSwift/style.css" rel="stylesheet" type="text/css">
+  <link rel="apple-touch-icon" href="../meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
   <link rel="icon" type="image/x-icon" href="../favicon-16x16.ico">
   <link rel="shortcut icon" type="image/x-icon" href="../favicon-16x16.ico">
-  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Game",
+      "name": "{taylorTitle}",
+      "description": "{taylorDescription}",
+      "genre": "Puzzle",
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "Game",
+      "operatingSystem": "Any",
+      "url": "https://2048game.com/themes/taylorSwift.html",
+      "inLanguage": "{lang}",
+      "author": {
+        "@type": "Organization",
+        "name": "2048+"
+      },
+      "about": {
+        "@type": "Person",
+        "name": "Taylor Swift"
+      }
+    }
+  </script>
 </head>
 <body>
   <div class="nav-container">
     <div class="nav-menu">
       <div class="site-title">2048+</div>
       <div class="nav-item">
-        <a href="../index.html" style="color: #f9f6f2; text-decoration: none; display: block;">Home</a>
+        <a href="../index.html" style="color: #f9f6f2; text-decoration: none; display: block;">{home}</a>
       </div>
       <div class="nav-item">
-        Themes
+        <span>{themes}</span>
         <div class="dropdown-content">
-          <a href="zodiac.html">Chinese Zodiac</a>
-          <a href="taylorSwift.html">Taylor Swift</a>
+          <a href="zodiac.html">{chineseZodiac}</a>
+          <a href="taylorSwift.html">{taylorSwift}</a>
         </div>
+      </div>
+    </div>
+    <div class="language-selector nav-item">
+      <span>{language}</span>
+      <div class="dropdown-content">
+        <a href="/cn/themes/taylorSwift.html" hreflang="zh-CN">简体中文</a>
+        <a href="/en/themes/taylorSwift.html" hreflang="en">English</a>
       </div>
     </div>
   </div>
 
-  <div class="container">
-    <div class="heading">
-      <h1 class="title">Taylor Swift 2048</h1>
-      <div class="scores-container">
-        <div class="score-container">0</div>
-        <div class="best-container">0</div>
-      </div>
-    </div>
+  <main class="container">
+    <article>
+      <header class="heading">
+        <h1 class="title">{taylorTitle}</h1>
+        <div class="scores-container">
+          <div class="score-container">0</div>
+          <div class="best-container">0</div>
+        </div>
+      </header>
 
-    <div class="above-game">
-      <p class="game-intro">Match Taylor's photos to unlock <strong>more Taylor moments</strong>!</p>
-      <a class="restart-button">New Game</a>
-    </div>
+      <section class="game-intro">
+        <p>{taylorIntro}</p>
+        <div class="above-game">
+          <a class="restart-button">{newGame}</a>
+        </div>
+      </section>
 
-    <div class="game-container">
-      <div class="game-message">
-        <p></p>
-        <div class="social-sharing">
-          <a href="#" class="twitter-share" onclick="shareOnTwitter()">
-            <i class="fab fa-twitter"></i> Share on Twitter
-          </a>
-          <a href="#" class="xiaohongshu-share" onclick="shareOnXiaohongshu()">
-            <i class="fas fa-heart"></i> Share on Little Red Book
-          </a>
+      <section class="game-container">
+        <div class="game-message">
+          <p></p>
+          <div class="social-sharing">
+            <a href="#" class="twitter-share" onclick="shareOnTwitter()">
+              <i class="fab fa-twitter"></i> {shareTwitter}
+            </a>
+            <a href="#" class="xiaohongshu-share" onclick="shareOnXiaohongshu()">
+              <i class="fas fa-heart"></i> {shareXiaohongshu}
+            </a>
+          </div>
+          <div class="lower">
+            <a class="keep-playing-button">{keepGoing}</a>
+            <a class="retry-button">{tryAgain}</a>
+          </div>
         </div>
-        <div class="lower">
-          <a class="keep-playing-button">Keep going</a>
-          <a class="retry-button">Try again</a>
-        </div>
-      </div>
 
-      <div class="grid-container">
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
         </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-      </div>
 
-      <div class="tile-container">
-      </div>
-    </div>
+        <div class="tile-container">
+        </div>
+      </section>
 
-    <p class="game-explanation">
-      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two identical photos touch, they <strong>merge into a new Taylor moment!</strong>
-    </p>
-    <hr>
-    <div class="game-description">
-      <h2>Taylor Swift's Journey in 2048</h2>
-      <p>This special edition celebrates Taylor Swift through the lens of artificial intelligence. We've used AI technology to create unique 
-      artistic interpretations of Taylor, each capturing different aspects of her style and personality.</p>
-      
-      <h3>Gameplay Features</h3>
-      <p>As you play, you'll discover various AI-generated portraits of Taylor:</p>
-      <ul>
-        <li>Start with classic portrait styles of Taylor</li>
-        <li>Combine tiles to reveal more artistic interpretations</li>
-        <li>Progress through various artistic styles and moods</li>
-        <li>Experience different facets of Taylor's persona</li>
-        <li>Discover unique AI-generated artistic renditions</li>
-        <li>Reach the ultimate Taylor portrait at 2048</li>
-      </ul>
-      
-      <h3>For Swifties</h3>
-      <p>This game is more than just a puzzle - it's an artistic tribute to Taylor Swift, combining modern AI technology with gaming. 
-      Each merge reveals a new AI-generated interpretation of Taylor, creating a unique blend of art, technology, and fandom.</p>
-    </div>
-  </div>
+      <section class="game-instructions">
+        <p class="game-explanation">
+          <strong class="important">{howToPlay}:</strong> {gameExplanation}
+        </p>
+        <hr>
+        <div class="game-description">
+          <h2>{taylorTitle}</h2>
+          <p>{aiArtDescription}</p>
+          
+          <h3>{gameplayFeatures}</h3>
+          <p>{gameplayText}</p>
+          <ul class="features-list">
+            <li>{featuresList_0}</li>
+            <li>{featuresList_1}</li>
+            <li>{featuresList_2}</li>
+            <li>{featuresList_3}</li>
+            <li>{featuresList_4}</li>
+            <li>{featuresList_5}</li>
+          </ul>
+          
+          <h3>{forSwifties}</h3>
+          <p>{swiftiesText}</p>
+          
+          
+        </div>
+      </section>
+    </article>
+  </main>
 
   <script src="../js/bind_polyfill.js"></script>
   <script src="../js/classlist_polyfill.js"></script>
@@ -131,28 +170,17 @@
   <script src="../js/application.js"></script>
   <script>
     function shareOnTwitter() {
-      const text = "I just played Taylor Swift 2048! Try to match AI-generated Taylor portraits!";
+      const text = "{taylorTitle} - {taylorDescription}";
       const url = window.location.href;
       window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
     }
 
     function shareOnXiaohongshu() {
-      // 小红书分享
-      const text = "I just played Taylor Swift 2048! Check it out: " + window.location.href;
+      const text = "{taylorTitle} - {taylorDescription} " + window.location.href;
       navigator.clipboard.writeText(text).then(() => {
-        alert("Link copied! You can now paste it on Little Red Book.");
+        alert("{shareXiaohongshu}");
       });
     }
   </script>
-  <div style="display: none;">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PC9T8W1TWM"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-PC9T8W1TWM');
-    </script>
 </body>
 </html>

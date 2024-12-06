@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>2048 Game Series | 2048 Fun Games</title>
+  <meta name="description" content="Welcome to 2048 Game Series! Try our themed versions:">
+  <link href="themes/common.css" rel="stylesheet" type="text/css">
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link rel="icon" type="image/x-icon" href="favicon-16x16.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon-16x16.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="nav-container">
+    <div class="nav-menu">
+      <div class="site-title">2048+</div>
+      <div class="nav-item">
+        <a href="index.html" style="color: #f9f6f2; text-decoration: none; display: block;">Home</a>
+      </div>
+      <div class="nav-item">
+        <span>Themes</span>
+        <div class="dropdown-content">
+          <a href="themes/zodiac.html">Chinese Zodiac</a>
+          <a href="themes/taylorSwift.html">Taylor Swift</a>
+        </div>
+      </div>
+    </div>
+    <div class="language-selector nav-item">
+      <span>Language</span>
+      <div class="dropdown-content">
+        <a href="/cn/index.html">简体中文</a>
+        <a href="/en/index.html">English</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+
+    <p class="theme-intro">
+      Welcome to 2048 Game Series! Try our themed versions:
+    </p>
+
+    <div class="above-game">
+      <p class="game-intro">Join numbers and get to the <strong>2048 tile!</strong></p>
+      <a class="restart-button">New Game</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="social-sharing">
+          <a href="#" class="twitter-share" onclick="shareOnTwitter()">
+            <i class="fab fa-twitter"></i> Share on Twitter
+          </a>
+          <a href="#" class="xiaohongshu-share" onclick="shareOnXiaohongshu()">
+            <i class="fas fa-heart"></i> Share on Little Red Book
+          </a>
+        </div>
+        <div class="lower">
+          <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button">Try again</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+      </div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+    </p>
+    <hr>
+    <div class="game-description">
+      <h2>About 2048</h2>
+      <p>2048 is an addictive puzzle game created by Gabriele Cirulli in March 2014. The game quickly became a worldwide phenomenon, spawning numerous variations and adaptations. The objective is simple yet challenging: combine matching numbers to create the tile with the number 2048.</p>
+      
+      <h3>Game Mechanics</h3>
+      <p>Players slide numbered tiles on a 4x4 grid using arrow keys. When two tiles with the same number collide, they merge into one tile with their sum. The game continues until you either create the 2048 tile (victory) or can no longer make any moves (game over).</p>
+      
+      <h3>Our Themed Versions</h3>
+      <p>Welcome to 2048 Game Series! Try our themed versions:</p>
+      <ul>
+        <li><strong><a href="themes/zodiac.html">Chinese Zodiac</a></strong></li>
+        <li><strong><a href="themes/taylorSwift.html">Taylor Swift</a></strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+  <script>
+    function shareOnTwitter() {
+      const text = "Welcome to 2048 Game Series! Try our themed versions:";
+      const url = window.location.href;
+      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+    }
+
+    function shareOnXiaohongshu() {
+      const text = "Welcome to 2048 Game Series! Try our themed versions: " + window.location.href;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Share on Little Red Book");
+      });
+    }
+  </script>
+</body>
+</html> 

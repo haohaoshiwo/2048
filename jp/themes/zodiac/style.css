@@ -1,0 +1,80 @@
+/* 隐藏所有数字 */
+.tile .tile-inner {
+  background-color: transparent !important;
+  color: transparent !important;
+}
+
+.tile.tile-2 .tile-inner {
+  background: url('./images/zodiac/2-mouse.png') no-repeat center center;
+  background-size: 80%;
+}
+
+.tile.tile-4 .tile-inner {
+  background: url('./images/zodiac/4-ox.png') no-repeat center center;
+  background-size: 80%;
+}
+
+.tile.tile-8 .tile-inner {
+  background: url('./images/zodiac/8-tiger.png') no-repeat center center;
+  background-size: 80%;
+}
+
+.tile.tile-16 .tile-inner {
+  background: url('./images/zodiac/16-rabbit.png') no-repeat center center;
+  background-size: 80%;
+}
+
+.tile.tile-32 .tile-inner {
+  background: url('./images/zodiac/32-dragon.png') no-repeat center center;
+  background-size: 80%;
+}
+
+.tile.tile-64 .tile-inner {
+  background: url('./images/zodiac/64-snake.png') no-repeat center center;
+  background-size: 80%;
+}
+
+.tile.tile-128 .tile-inner {
+  background: url('./images/zodiac/128-horse.png') no-repeat center center;
+  background-size: 80%;
+}
+
+.tile.tile-256 .tile-inner {
+  background: url('./images/zodiac/256-goat.png') no-repeat center center;
+  background-size: 80%;
+}
+
+.tile.tile-512 .tile-inner {
+  background: url('./images/zodiac/512-monkey.png') no-repeat center center;
+  background-size: 80%;
+}
+
+.tile.tile-1024 .tile-inner {
+  background: url('./images/zodiac/1024-rooster.png') no-repeat center center;
+  background-size: 80%;
+}
+
+.tile.tile-2048 .tile-inner {
+  background: url('./images/zodiac/2048-dog.png') no-repeat center center;
+  background-size: 80%;
+}
+
+.tile.tile-4096 .tile-inner {
+  background: url('./images/zodiac/4096-pig.png') no-repeat center center;
+  background-size: 80%;
+}
+
+.tile.tile-8192 .tile-inner {
+  background: url('./images/zodiac/4096-pig.png') no-repeat center center;
+  background-size: 80%;
+}
+
+.tile.tile-super .tile-inner {
+  background: url('./images/zodiac/4096-pig.png') no-repeat center center;
+  background-size: 80%;
+}
+
+/* 隐藏数字 */
+.tile-inner {
+  color: transparent;
+} 

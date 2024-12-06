@@ -1,123 +1,157 @@
 <!DOCTYPE html>
-<html>
+<html lang="{lang}">
 <head>
   <meta charset="utf-8">
-  <title>2048 - Chinese Zodiac Edition | Chinese Zodiac 2048</title>
-  <meta name="description" content="Play the Chinese zodiac 2048 game! Match zodiac signs to unlock more animals. Use arrow keys to slide and combine tiles.">
-  <meta name="keywords" content="2048 game, Chinese zodiac game, zodiac puzzle, 2048 variant">
-  <meta name="author" content="bookbyter">
-  <link href="../style/main.css" rel="stylesheet" type="text/css">
+  <title>{zodiacTitle} | 2048+ Game Series</title>
+  <meta name="description" content="{zodiacDescription}">
+  <meta name="keywords" content="{chineseZodiac}, 2048 game, {rat}, {ox}, {tiger}, {rabbit}, {dragon}, {snake}, {horse}, {goat}, {monkey}, {rooster}, {dog}, {pig}">
   <link href="../themes/common.css" rel="stylesheet" type="text/css">
+  <link href="../style/main.css" rel="stylesheet" type="text/css">
   <link href="zodiac/style.css" rel="stylesheet" type="text/css">
+  <link rel="apple-touch-icon" href="../meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
   <link rel="icon" type="image/x-icon" href="../favicon-16x16.ico">
   <link rel="shortcut icon" type="image/x-icon" href="../favicon-16x16.ico">
-  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Game",
+      "name": "{zodiacTitle}",
+      "description": "{zodiacDescription}",
+      "genre": "Puzzle",
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "Game",
+      "operatingSystem": "Any",
+      "url": "https://2048game.com/themes/zodiac.html",
+      "inLanguage": "{lang}",
+      "author": {
+        "@type": "Organization",
+        "name": "2048+"
+      }
+    }
+  </script>
 </head>
 <body>
   <div class="nav-container">
     <div class="nav-menu">
       <div class="site-title">2048+</div>
       <div class="nav-item">
-        <a href="../index.html" style="color: #f9f6f2; text-decoration: none; display: block;">Home</a>
+        <a href="../index.html" style="color: #f9f6f2; text-decoration: none; display: block;">{home}</a>
       </div>
       <div class="nav-item">
-        Themes
+        <span>{themes}</span>
         <div class="dropdown-content">
-          <a href="zodiac.html">Chinese Zodiac</a>
-          <a href="taylorSwift.html">Taylor Swift</a>
+          <a href="zodiac.html">{chineseZodiac}</a>
+          <a href="taylorSwift.html">{taylorSwift}</a>
         </div>
+      </div>
+    </div>
+    <div class="language-selector nav-item">
+      <span>{language}</span>
+      <div class="dropdown-content">
+        <a href="/cn/themes/zodiac.html" hreflang="zh-CN">简体中文</a>
+        <a href="/en/themes/zodiac.html" hreflang="en">English</a>
       </div>
     </div>
   </div>
 
-  <div class="container">
-    <div class="heading">
-      <h1 class="title">2048 - Chinese Zodiac</h1>
-      <div class="scores-container">
-        <div class="score-container">0</div>
-        <div class="best-container">0</div>
-      </div>
-    </div>
+  <main class="container">
+    <article>
+      <header class="heading">
+        <h1 class="title">{zodiacTitle}</h1>
+        <div class="scores-container">
+          <div class="score-container">0</div>
+          <div class="best-container">0</div>
+        </div>
+      </header>
 
-    <div class="above-game">
-      <p class="game-intro">Match the same zodiac signs to get <strong>more zodiac animals</strong>!</p>
-      <a class="restart-button">New Game</a>
-    </div>
+      <section class="game-intro">
+        <p>{zodiacIntro}</p>
+        <div class="above-game">
+          <a class="restart-button">{newGame}</a>
+        </div>
+      </section>
 
-    <div class="game-container">
-      <div class="game-message">
-        <p></p>
-        <div class="social-sharing">
-          <a href="#" class="twitter-share" onclick="shareOnTwitter()">
-            <i class="fab fa-twitter"></i> Share on Twitter
-          </a>
-          <a href="#" class="xiaohongshu-share" onclick="shareOnXiaohongshu()">
-            <i class="fas fa-heart"></i> Share on Little Red Book
-          </a>
+      <section class="game-container">
+        <div class="game-message">
+          <p></p>
+          <div class="social-sharing">
+            <a href="#" class="twitter-share" onclick="shareOnTwitter()">
+              <i class="fab fa-twitter"></i> {shareTwitter}
+            </a>
+            <a href="#" class="xiaohongshu-share" onclick="shareOnXiaohongshu()">
+              <i class="fas fa-heart"></i> {shareXiaohongshu}
+            </a>
+          </div>
+          <div class="lower">
+            <a class="keep-playing-button">{keepGoing}</a>
+            <a class="retry-button">{tryAgain}</a>
+          </div>
         </div>
-        <div class="lower">
-          <a class="keep-playing-button">Keep going</a>
-          <a class="retry-button">Try again</a>
-        </div>
-      </div>
 
-      <div class="grid-container">
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
         </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-      </div>
 
-      <div class="tile-container">
-      </div>
-    </div>
+        <div class="tile-container">
+        </div>
+      </section>
 
-    <p class="game-explanation">
-      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same zodiac sign touch, they <strong>merge into the next zodiac animal!</strong>
-    </p>
-    <hr>
-    <div class="game-description">
-      <h2>The Chinese Zodiac Story</h2>
-      <p>The Chinese zodiac, known as Sheng Xiao (生肖), is a repeating 12-year cycle of animal signs. According to legend, the Jade Emperor held a great race 
-      across a river to determine the order of the zodiac animals. The clever Rat, hardworking Ox, brave Tiger, and nine other animals each earned their place 
-      in this ancient tradition.</p>
-      
-      <h3>The Zodiac Cycle in Our Game</h3>
-      <p>In this special edition of 2048, we've incorporated all twelve zodiac animals in their traditional order:</p>
-      <ul>
-        <li>Start with the Rat (鼠) and Ox (牛)</li>
-        <li>Combine them to create the Tiger (虎)</li>
-        <li>Progress through Rabbit (兔), Dragon (龙), Snake (蛇)</li>
-        <li>Continue with Horse (马), Goat (羊), Monkey (猴)</li>
-        <li>Finally reach Rooster (鸡), Dog (狗), and Pig (猪)</li>
-      </ul>
-      
-      <h3>Cultural Significance</h3>
-      <p>Each zodiac animal carries unique characteristics and symbolism in Chinese culture. As you play, you'll discover the complete cycle 
-      of these beloved zodiac animals, making this more than just a game - it's a journey through Chinese tradition.</p>
-    </div>
-  </div>
+      <section class="game-instructions">
+        <p class="game-explanation">
+          <strong class="important">{howToPlay}:</strong> {gameExplanation}
+        </p>
+        <hr>
+        <div class="game-description">
+          <h2>{zodiacStory}</h2>
+          <p>{zodiacStoryText}</p>
+          
+          <h3>{zodiacCycle}</h3>
+          <p>{zodiacCycleText}</p>
+          <ul class="zodiac-progression">
+            <li>{zodiacCycleList_0}</li>
+            <li>{zodiacCycleList_1}</li>
+            <li>{zodiacCycleList_2}</li>
+            <li>{zodiacCycleList_3}</li>
+            <li>{zodiacCycleList_4}</li>
+          </ul>
+          
+          <h3>{culturalSignificance}</h3>
+          <p>{culturalSignificanceText}</p>
+          
+          
+        </div>
+      </section>
+    </article>
+  </main>
 
   <script src="../js/bind_polyfill.js"></script>
   <script src="../js/classlist_polyfill.js"></script>
@@ -131,28 +165,17 @@
   <script src="../js/application.js"></script>
   <script>
     function shareOnTwitter() {
-      const text = "I just played Chinese Zodiac 2048! Match the zodiac animals!";
+      const text = "{zodiacTitle} - {zodiacDescription}";
       const url = window.location.href;
       window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
     }
- 
+
     function shareOnXiaohongshu() {
-      // 小红书分享
-      const text = "I just played Chinese Zodiac 2048! Check it out: " + window.location.href;
+      const text = "{zodiacTitle} - {zodiacDescription} " + window.location.href;
       navigator.clipboard.writeText(text).then(() => {
-        alert("Link copied! You can now paste it on Little Red Book.");
+        alert("{shareXiaohongshu}");
       });
     }
   </script>
-  <div style="display: none;">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PC9T8W1TWM"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-PC9T8W1TWM');
-    </script>
 </body>
 </html>

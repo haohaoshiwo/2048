@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="utf-8">
+  <title>2048泰勒斯威夫特版 | 2048+ Game Series</title>
+  <meta name="description" content="通过AI生成的艺术肖像致敬泰勒斯威夫特的特别版本。">
+  <meta name="keywords" content="泰勒斯威夫特版, 2048 game, 处女作, 无畏, 立刻说, 红色, 1989, 名誉, 恋人, 民谣, 永恒, 午夜">
+  <link href="../themes/common.css" rel="stylesheet" type="text/css">
+  <link href="../style/main.css" rel="stylesheet" type="text/css">
+  <link href="taylorSwift/style.css" rel="stylesheet" type="text/css">
+  <link rel="apple-touch-icon" href="../meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link rel="icon" type="image/x-icon" href="../favicon-16x16.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon-16x16.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Game",
+      "name": "2048泰勒斯威夫特版",
+      "description": "通过AI生成的艺术肖像致敬泰勒斯威夫特的特别版本。",
+      "genre": "Puzzle",
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "Game",
+      "operatingSystem": "Any",
+      "url": "https://2048game.com/themes/taylorSwift.html",
+      "inLanguage": "cn",
+      "author": {
+        "@type": "Organization",
+        "name": "2048+"
+      },
+      "about": {
+        "@type": "Person",
+        "name": "Taylor Swift"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="nav-container">
+    <div class="nav-menu">
+      <div class="site-title">2048+</div>
+      <div class="nav-item">
+        <a href="../index.html" style="color: #f9f6f2; text-decoration: none; display: block;">首页</a>
+      </div>
+      <div class="nav-item">
+        <span>主题</span>
+        <div class="dropdown-content">
+          <a href="zodiac.html">生肖版</a>
+          <a href="taylorSwift.html">泰勒斯威夫特版</a>
+        </div>
+      </div>
+    </div>
+    <div class="language-selector nav-item">
+      <span>语言</span>
+      <div class="dropdown-content">
+        <a href="/cn/themes/taylorSwift.html" hreflang="zh-CN">简体中文</a>
+        <a href="/en/themes/taylorSwift.html" hreflang="en">English</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+    <article>
+      <header class="heading">
+        <h1 class="title">2048泰勒斯威夫特版</h1>
+        <div class="scores-container">
+          <div class="score-container">0</div>
+          <div class="best-container">0</div>
+        </div>
+      </header>
+
+      <section class="game-intro">
+        <p>合并肖像，探索泰勒独特的艺术诠释！</p>
+        <div class="above-game">
+          <a class="restart-button">新游戏</a>
+        </div>
+      </section>
+
+      <section class="game-container">
+        <div class="game-message">
+          <p></p>
+          <div class="social-sharing">
+            <a href="#" class="twitter-share" onclick="shareOnTwitter()">
+              <i class="fab fa-twitter"></i> 分享到推特
+            </a>
+            <a href="#" class="xiaohongshu-share" onclick="shareOnXiaohongshu()">
+              <i class="fas fa-heart"></i> 分享到小红书
+            </a>
+          </div>
+          <div class="lower">
+            <a class="keep-playing-button">继续游戏</a>
+            <a class="retry-button">再试一次</a>
+          </div>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+        </div>
+
+        <div class="tile-container">
+        </div>
+      </section>
+
+      <section class="game-instructions">
+        <p class="game-explanation">
+          <strong class="important">游戏规则:</strong> 使用<strong>方向键</strong>移动方块。当两个相同数字的方块相撞时，它们会<strong>合并成一个！</strong>
+        </p>
+        <hr>
+        <div class="game-description">
+          <h2>2048泰勒斯威夫特版</h2>
+          <p>这个特别��本通过人工智能的视角致敬泰勒斯威夫特。我们使用AI技术创造了泰勒独特的艺术诠释，每一幅都捕捉了她不同风格和个性的特点。</p>
+          
+          <h3>游戏特色</h3>
+          <p>在游戏过程中，你将发现种AI生成的泰勒肖像：</p>
+          <ul class="features-list">
+            <li>从泰勒的经典肖像风格开始</li>
+            <li>合并方块揭示更多艺术诠释</li>
+            <li>体验各种艺术风格和情绪</li>
+            <li>感受泰勒不同面貌的魅力</li>
+            <li>发现独特的AI生成艺术作品</li>
+            <li>达到2048解锁终极泰勒肖像</li>
+          </ul>
+          
+          <h3>献给泰勒粉丝</h3>
+          <p>这不仅仅是一个益智游戏 - 这是一份致敬泰勒斯威夫特的艺术作品，将现代AI技术与游戏完美结合。每次合并都会展现一幅新的AI生成的泰勒诠释，创造出艺术、技术与粉丝文化的独特融合。</p>
+          
+          <h3>Taylor's Eras</h3>
+          <nav class="eras-list" aria-label="Taylor's Eras">
+            <ol>
+              <li>处女作 → 无畏 → 立刻说 → 红色 → 1989</li>
+              <li>名誉 → 恋人 → 民谣 → 永恒 → 午夜</li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <script src="../js/bind_polyfill.js"></script>
+  <script src="../js/classlist_polyfill.js"></script>
+  <script src="../js/animframe_polyfill.js"></script>
+  <script src="../js/keyboard_input_manager.js"></script>
+  <script src="../js/html_actuator.js"></script>
+  <script src="../js/grid.js"></script>
+  <script src="../js/tile.js"></script>
+  <script src="../js/local_storage_manager.js"></script>
+  <script src="../js/game_manager.js"></script>
+  <script src="../js/application.js"></script>
+  <script>
+    function shareOnTwitter() {
+      const text = "2048泰勒斯威夫特版 - 通过AI生成的艺术肖像致敬泰勒斯威夫特的特别版本。";
+      const url = window.location.href;
+      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+    }
+
+    function shareOnXiaohongshu() {
+      const text = "2048泰勒斯威夫特版 - 通过AI生成的艺术肖像致敬泰勒斯威夫特的特别版本。 " + window.location.href;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("分享到小红书");
+      });
+    }
+  </script>
+</body>
+</html>

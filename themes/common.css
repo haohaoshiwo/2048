@@ -6,319 +6,166 @@ body {
 
 /* 导航栏样式 */
 .nav-container {
-  background-color: #bbada0;
-  padding: 5px 0;
-  margin-bottom: 15px;
-  position: relative;
-  z-index: 90;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #776e65;
+  padding: 10px 0;
+  margin-bottom: 40px;
 }
 
 .nav-menu {
-  max-width: 500px;
   display: flex;
-  justify-content: center;
-  gap: 15px;
   align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-title {
+  color: #f9f6f2;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 40px;
 }
 
 .nav-item {
   position: relative;
+  margin-right: 20px;
   color: #f9f6f2;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 5px 10px;
-  height: 32px;
-  line-height: 32px;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #bbada0;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 100;
-  border-radius: 3px;
-  top: 100%;
-  left: 0;
-  margin-top: 0;
-}
-
-.nav-item::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  right: 0;
-  height: 10px;
 }
 
 .nav-item:hover .dropdown-content {
   display: block;
 }
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #776e65;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
 .dropdown-content a {
   color: #f9f6f2;
-  padding: 8px 12px;
+  padding: 12px 16px;
   text-decoration: none;
   display: block;
-  white-space: nowrap;
 }
 
 .dropdown-content a:hover {
   background-color: #8f7a66;
-  border-radius: 3px;
 }
 
-/* 容器布局调整 */
+.language-selector {
+  margin-left: auto;
+}
+
+/* 游戏区域样式 */
 .container {
-  margin-top: 10px;
-  padding: 0 15px;
-  max-width: 600px;
-}
-
-.heading {
-  margin-bottom: 5px;
-}
-
-h1.title {
-  font-size: 28px;
-  margin: 0;
-  display: block;
-  float: left;
-}
-
-.scores-container {
-  float: right;
-  margin-top: 0;
-  z-index: 1;
-  position: relative;
-}
-
-.above-game {
-  margin-bottom: 10px;
-  margin-top: 0;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .game-intro {
-  margin-bottom: 0;
-  
-  margin-top: 0;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.game-explanation {
-  margin-top: 10px;
-  font-size: 14px;
+.above-game {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 10;
 }
 
-/* 移动端适配 */
-@media screen and (max-width: 520px) {
-  .container {
-    padding: 0 10px;
-    margin-top: 5px;
-  }
-
-  h1.title {
-    font-size: 20px;
-    padding-top: 5px;
-  }
-
-  .scores-container {
-    margin-top: 0;
-  }
-
-  .score-container, .best-container {
-    padding: 10px 15px;
-    min-width: 40px;
-  }
-
-  .heading {
-    margin-bottom: 5px;
-  }
-
-  .game-intro {
-    font-size: 14px;
-    margin-top: 0;
-  }
-
-  .game-explanation {
-    font-size: 13px;
-    margin-top: 5px;
-  }
-
-  .grid-container {
-    margin-top: 5px;
-  }
-
-  .theme-intro {
-    margin-bottom: 8px;
-  }
-
-  .above-game {
-    margin-bottom: 8px;
-    margin-top: 0;
-  }
+.game-container {
+  margin: 0 auto 40px;
+  position: relative;
+  z-index: 5;
 }
 
-/* 小屏幕设备优化 */
-@media screen and (max-width: 320px) {
-  h1.title {
-    font-size: 18px;
-  }
-
-  .container {
-    padding: 0 5px;
-  }
-
-  .score-container, .best-container {
-    padding: 8px 12px;
-    min-width: 30px;
-    font-size: 14px;
-  }
+.game-instructions {
+  margin-top: 40px;
+  clear: both;
 }
 
-.theme-intro {
- 
-  color: #776e65;
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-.theme-intro a {
-  color: #776e65;
-  font-weight: bold;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.theme-intro a:hover {
-  color: #8f7a66;
-}
-
-.restart-button:hover {
-  background-color: #9f8b77;
-  transition: background-color 0.2s ease;
-}
-
-.nav-item:hover {
-  opacity: 0.9;
-}
-
-/* SEO内容样式 */
 .game-description {
   margin-top: 30px;
-  color: #776e65;
-  font-size: 15px;
-  line-height: 1.65;
 }
 
-.game-description h2 {
-  font-size: 24px;
-  margin-bottom: 15px;
-  color: #776e65;
-}
-
-.game-description h3 {
-  font-size: 20px;
-  margin: 20px 0 10px;
-  color: #776e65;
-}
-
-.game-description p {
-  margin-bottom: 15px;
-}
-
-.game-description ul {
-  margin-left: 20px;
-  margin-bottom: 15px;
-}
-
-.game-description li {
-  margin-bottom: 8px;
-}
-
-@media screen and (max-width: 520px) {
-  .game-description {
-    font-size: 14px;
-  }
-  
-  .game-description h2 {
-    font-size: 20px;
-  }
-  
-  .game-description h3 {
-    font-size: 18px;
-  }
-}
-
-/* 社交分享按钮样式 */
+/* 社交分享按钮 */
 .social-sharing {
-  text-align: center;
   margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .social-sharing a {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  margin: 0 10px;
-  padding: 8px 15px;
-  border-radius: 20px;
+  padding: 10px 20px;
+  border-radius: 4px;
   color: #fff;
   text-decoration: none;
-  font-size: 14px;
-  transition: opacity 0.2s;
+  transition: background-color 0.2s;
 }
 
-.social-sharing a:hover {
-  opacity: 0.8;
-}
-
-.social-sharing .twitter-share {
+.twitter-share {
   background-color: #1DA1F2;
 }
 
-.social-sharing .youtube-share {
-  background-color: #FF0000;
+.twitter-share:hover {
+  background-color: #1991db;
 }
 
-.social-sharing .xiaohongshu-share {
-  background-color: #FE2C55;
+.xiaohongshu-share {
+  background-color: #fe2c55;
+}
+
+.xiaohongshu-share:hover {
+  background-color: #e5294d;
 }
 
 .social-sharing i {
-  margin-right: 5px;
-  font-size: 16px;
+  margin-right: 8px;
 }
 
+/* 响应式设计 */
 @media screen and (max-width: 520px) {
-  .social-sharing {
-    margin: 15px 0;
+  .nav-menu {
+    flex-wrap: wrap;
   }
-  
-  .social-sharing a {
-    padding: 6px 12px;
-    font-size: 12px;
-}
 
-.site-title {
-  position: absolute;
-  left: 15px;
-  color: #f9f6f2;
-  font-weight: bold;
-  font-size: 24px;
-  height: 32px;
-  line-height: 32px;
-}
-
-@media screen and (max-width: 520px) {
   .site-title {
-    font-size: 18px;
-    left: 10px;
+    margin-right: 20px;
+  }
+
+  .nav-item {
+    margin-right: 10px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .game-container {
+    width: 280px;
+    height: 280px;
+  }
+
+  .social-sharing {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-sharing a {
+    width: 200px;
+    justify-content: center;
   }
 }
   

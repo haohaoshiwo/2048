@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="utf-8">
+  <title>2048 Game Series | 2048 Fun Games</title>
+  <meta name="description" content="欢迎来到2048游戏系列！尝试我们的主题版本：">
+  <link href="themes/common.css" rel="stylesheet" type="text/css">
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link rel="icon" type="image/x-icon" href="favicon-16x16.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon-16x16.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="nav-container">
+    <div class="nav-menu">
+      <div class="site-title">2048+</div>
+      <div class="nav-item">
+        <a href="index.html" style="color: #f9f6f2; text-decoration: none; display: block;">首页</a>
+      </div>
+      <div class="nav-item">
+        <span>主题</span>
+        <div class="dropdown-content">
+          <a href="themes/zodiac.html">生肖版</a>
+          <a href="themes/taylorSwift.html">泰勒斯威夫特版</a>
+        </div>
+      </div>
+    </div>
+    <div class="language-selector nav-item">
+      <span>语言</span>
+      <div class="dropdown-content">
+        <a href="/cn/index.html">简体中文</a>
+        <a href="/en/index.html">English</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+
+    <p class="theme-intro">
+      欢迎来到2048游戏系列！尝试我们的主题版本：
+    </p>
+
+    <div class="above-game">
+      <p class="game-intro">合并数字，获得 <strong>2048</strong> 方块！</p>
+      <a class="restart-button">新游戏</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="social-sharing">
+          <a href="#" class="twitter-share" onclick="shareOnTwitter()">
+            <i class="fab fa-twitter"></i> 分享到推特
+          </a>
+          <a href="#" class="xiaohongshu-share" onclick="shareOnXiaohongshu()">
+            <i class="fas fa-heart"></i> 分享到小红书
+          </a>
+        </div>
+        <div class="lower">
+          <a class="keep-playing-button">继续游戏</a>
+          <a class="retry-button">再试一次</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+      </div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">游戏规则:</strong> 使用<strong>方向键</strong>移动方块。当两个相同数字的方块相撞时，它们会<strong>合并成一个！</strong>
+    </p>
+    <hr>
+    <div class="game-description">
+      <h2>关于2048</h2>
+      <p>2048是由Gabriele Cirulli于2014年3月创建的一款令人上瘾的益智游戏。这个游戏迅速成为全球现象，衍生出众多变体和改编版本。游戏目标简单而具有挑战性合并相同的数字以创建数字2048的方块。</p>
+      
+      <h3>游戏机制</h3>
+      <p>玩家使用方向键在4x4网格上滑动数字方块。当两个相同数字的方块碰撞时，它们会合并成一个新的方块，数字为两者之和。游戏持续进行，直到你创建出2048方块（胜利）或无法继续移动（游戏结束）。</p>
+      
+      <h3>主题版本</h3>
+      <p>欢迎来到2048游戏系列！尝试我们的主题版本：</p>
+      <ul>
+        <li><strong><a href="themes/zodiac.html">生肖版</a></strong></li>
+        <li><strong><a href="themes/taylorSwift.html">泰勒斯威夫特版</a></strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+  <script>
+    function shareOnTwitter() {
+      const text = "欢迎来到2048游戏系列！尝试我们的主题版本：";
+      const url = window.location.href;
+      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+    }
+
+    function shareOnXiaohongshu() {
+      const text = "欢迎来到2048游戏系列！尝试我们的主题版本： " + window.location.href;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("分享到小红书");
+      });
+    }
+  </script>
+</body>
+</html> 

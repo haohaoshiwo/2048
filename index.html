@@ -2,167 +2,101 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>2048 Game Series | 2048 Fun Games</title>
-  <meta name="description" content="Play the 2048 game series! Try our themed versions: Chinese zodiac 2048 or Taylor Swift 2048.">
-  <link href="themes/common.css" rel="stylesheet" type="text/css">
-  <link href="style/main.css" rel="stylesheet" type="text/css">
- 
-  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
-  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
-  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x920.png"  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>2048 Game Series | Choose Language | 选择语言</title>
+  <meta name="description" content="Play the 2048 game series in your preferred language! | 使用您偏好的语言玩2048游戏系列！">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: #faf8ef;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .container {
+      background-color: #bbada0;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #f9f6f2;
+      margin: 0 0 30px 0;
+      font-size: 32px;
+    }
+    .language-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+    .language-button {
+      background-color: #8f7a66;
+      color: #f9f6f2;
+      border: none;
+      padding: 15px 30px;
+      font-size: 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+    .language-button:hover {
+      background-color: #776e65;
+    }
+    .loading {
+      color: #776e65;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  </style>
+  <script>
+    function getPreferredLanguage() {
+      // 获取浏览器语言设置
+      const lang = navigator.language || navigator.userLanguage;
+      
+      // 获取语言代码的前两个字符
+      const browserLang = lang.toLowerCase().slice(0, 2);
+      
+      // 如果是中文，返回 'cn'
+      if (browserLang === 'zh') {
+        return 'cn';
+      }
+      
+      // 默认返回英文
+      return 'en';
+    }
 
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
-  <link rel="icon" type="image/x-icon" href="favicon-16x16.ico">
-  <link rel="shortcut icon" type="image/x-icon" href="favicon-16x16.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    // 页面加载完成后执行重定向
+    window.addEventListener('load', function() {
+      const lang = getPreferredLanguage();
+      // 显示加载提示
+      document.getElementById('loading').style.display = 'block';
+      // 延迟一秒执行重定向，让用户有机会看到语言选择界面
+      setTimeout(function() {
+        window.location.href = '/' + lang + '/index.html';
+      }, 1000);
+    });
+  </script>
 </head>
 <body>
-  <div class="nav-container">
-    <div class="nav-menu">
-      <div class="site-title">2048+</div>
-      <div class="nav-item">
-        <a href="index.html" style="color: #f9f6f2; text-decoration: none; display: block;">Home</a>
-      </div>
-      <div class="nav-item">
-        Themes
-        <div class="dropdown-content">
-          <a href="themes/zodiac.html">Chinese Zodiac</a>
-          <a href="themes/taylorSwift.html">Taylor Swift</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="container">
-    <div class="heading">
-      <h1 class="title">2048</h1>
-      <div class="scores-container">
-        <div class="score-container">0</div>
-        <div class="best-container">0</div>
-      </div>
+    <h1>2048+</h1>
+    <div class="language-buttons">
+      <a href="/en/index.html" class="language-button">English</a>
+      <a href="/cn/index.html" class="language-button">简体中文</a>
     </div>
-
-    <p class="theme-intro">
-      Welcome to 2048 Game Series! Try our themed versions: 
-      <a href="themes/zodiac.html">Chinese zodiac </a> or 
-      <a href="themes/taylorSwift.html">Taylor Swift 2048</a> edition.
+    <p id="loading" class="loading" style="display: none;">
+      Redirecting to your preferred language... <br>
+      正在跳转到您偏好的语言...
     </p>
-
-    <div class="above-game">
-      <p class="game-intro">Join numbers and get to the <strong>2048 tile!</strong></p>
-      <a class="restart-button">New Game</a>
-    </div>
-
-    <div class="game-container">
-      <div class="game-message">
-        <p></p>
-        <div class="social-sharing">
-          <a href="#" class="twitter-share" onclick="shareOnTwitter()">
-            <i class="fab fa-twitter"></i> Share on Twitter
-          </a>
-          <a href="#" class="xiaohongshu-share" onclick="shareOnXiaohongshu()">
-            <i class="fas fa-heart"></i> Share on Little Red Book
-          </a>
-        </div>
-        <div class="lower">
-          <a class="keep-playing-button">Keep going</a>
-          <a class="retry-button">Try again</a>
-        </div>
-      </div>
-
-      <div class="grid-container">
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-      </div>
-
-      <div class="tile-container">
-
-      </div>
-    </div>
-
-    <p class="game-explanation">
-      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
-    </p>
-    <hr>
-    <div class="game-description">
-      <h2>About 2048</h2>
-      <p>2048 is an addictive puzzle game created by Gabriele Cirulli in March 2014. The game quickly became a worldwide phenomenon, 
-      spawning numerous variations and adaptations. The objective is simple yet challenging: combine matching numbers to create the tile with the number 2048.</p>
-      
-      <h3>Game Mechanics</h3>
-      <p>Players slide numbered tiles on a 4x4 grid using arrow keys. When two tiles with the same number collide, they merge into one tile with their sum. 
-      The game continues until you either create the 2048 tile (victory) or can no longer make any moves (game over).</p>
-      
-      <h3>Our Themed Versions</h3>
-      <p>We've created unique variations of the classic 2048 game:</p>
-      <ul>
-        <li><strong><a href="themes/zodiac.html">Chinese Zodiac 2048</a>:</strong> Experience the traditional Chinese zodiac cycle through gameplay, featuring all twelve zodiac animals.</li>
-        <li><strong><a href="themes/taylorSwift.html">Taylor Swift 2048</a>:</strong> A special edition for Swifties, featuring AI-generated artistic portraits of Taylor in different styles.</li>
-      </ul>
-    </div>
   </div>
-
-  <script src="js/bind_polyfill.js"></script>
-  <script src="js/classlist_polyfill.js"></script>
-  <script src="js/animframe_polyfill.js"></script>
-  <script src="js/keyboard_input_manager.js"></script>
-  <script src="js/html_actuator.js"></script>
-  <script src="js/grid.js"></script>
-  <script src="js/tile.js"></script>
-  <script src="js/local_storage_manager.js"></script>
-  <script src="js/game_manager.js"></script>
-  <script src="js/application.js"></script>
-  <script>
-    function shareOnTwitter() {
-      const text = "I just played 2048 Game! Check it out!";
-      const url = window.location.href;
-      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
-    }
-
-    function shareOnXiaohongshu() {
-      // 小红书分享
-      const text = "I just played 2048 Game! Check it out: " + window.location.href;
-      navigator.clipboard.writeText(text).then(() => {
-        alert("Link copied! You can now paste it on Little Red Book.");
-      });
-    }
-  </script>
-  <div style="display: none;">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PC9T8W1TWM"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-PC9T8W1TWM');
-    </script>
-  </div>
+  <noscript>
+    <style>
+      #loading { display: none !important; }
+    </style>
+  </noscript>
 </body>
 </html>
